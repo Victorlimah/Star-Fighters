@@ -19,3 +19,9 @@ export function updateUser(username: string, field: string): Promise<any> {
     [username]
   );
 }
+
+export function getRanking(): Promise<any> {
+  return connection.query(
+    `SELECT username, wins, losses, draws FROM fighters ORDER BY wins DESC`
+  );
+}

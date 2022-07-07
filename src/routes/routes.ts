@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { battle } from "../controllers/controller.js";
+import { battle, ranking } from "../controllers/controller.js";
 
 const router = Router();
 
 router.post("/battle", battle);
-router.get("/ranking");
+router.get("/ranking", ranking);
 
 export default router;

@@ -65,5 +65,10 @@ async function insertInfoDB(first: string, second: string, result: {winner: stri
     await repository.updateUser(first, "draws");
     await repository.updateUser(second, "draws");
   }
+}
 
+export async function getRanking(){
+  const ranking = await repository.getRanking();
+
+  return ranking;
 }

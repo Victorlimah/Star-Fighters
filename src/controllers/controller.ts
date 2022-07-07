@@ -14,3 +14,9 @@ export async function battle(req: Request, res: Response) {
 
   res.send(results);
 }
+
+export async function ranking(req: Request, res: Response) {
+  const { rows: fighters } = await service.getRanking();
+
+  res.send({fighters});
+}
